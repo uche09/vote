@@ -12,6 +12,11 @@ Then install required dependencies by running this command on your terminal:
 npm install
 ```
 
+Start server by running project script:
+```bash
+npm run server
+```
+
 ## Branching
 - All collaborators must create a branch named contributor/<name> where name is their first name. I have created a branch named (contributor/uche) which is where I am making these changes, you would create yours too.
 
