@@ -1,13 +1,21 @@
 import express from 'express';
-import vote from "./routes/vote.js";
+import cookieParser from 'cookie-parser';
+import vote from './routes/vote.js';
 
 const app = express();
 const PORT = 3000;
+
 app.set("view engine", "ejs");
+app.use(cookieParser());
+app.use(express.urlencoded({extended: true }));
 
 
 app.get("/", (req, res) => {
-    res.send("TODO");
+    if (req.cookies.voted) {
+        res.send("Redirect to result");
+    }
+
+    res.render("index");
     
 });
 
