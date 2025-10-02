@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Vote</h1>
+      <h2>Do you enjoy</h2>
+      <h2>Backend Development?</h2>
+      <section>
+        <div class="Btns">
+          <div class="Green">
+            <!-- YES-FORM -->
+            <form action="http://localhost:3000/vote" method="POST">
+              <input type="hidden" name="vote" value="YES" />
+              <input type="submit" value="YES" class="Btn" id="YesBtn">
+            </form>
+          </div>
+          <div class="Red">
+            <!-- NO-FORM -->
+            <form action="http://localhost:3000/vote" method="POST">
+              <input type="hidden" name="vote" value="NO" />
+              <input type="submit" name="vote" value="NO" class="Btn" id="NoBtn">
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
