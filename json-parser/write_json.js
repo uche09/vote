@@ -1,7 +1,7 @@
 import { promises as fs, existsSync as exists } from "fs";
 import path from "path";
 
-export default async function writeVotesFile(data) {
+export async function writeVotesFile(data) {
   try {
     const dirPath = path.join(process.cwd(), ".instance");
     const filePath = path.join(dirPath, "vote.json");

@@ -3,7 +3,7 @@ import path from "path";
 
 const filePath = path.resolve("./.instance/vote.json");
 
-export default async function readVotesFile() {
+export async function readVotesFile() {
   try {
 
     if (exists(filePath)) {
