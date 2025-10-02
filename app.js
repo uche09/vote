@@ -1,6 +1,8 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import vote from './routes/vote.js';
+import { readVotesFile } from './json-parser/index.js';
+import { calVotesPercentage } from './util.js';
 
 const app = express();
 const PORT = 3000;
@@ -11,9 +13,13 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true }));
 
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
     if (req.cookies.voted) {
-        res.send("Redirect to result");
+
+        const votes = await readVotesFile();
+        const votesPercentages = calVotesPercentage(votes);
+
+        return res.render("result", {percent: votesPercentages})
     }
 
     res.render("index");
