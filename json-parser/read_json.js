@@ -1,14 +1,20 @@
-import { promises as fs } from "fs";
+import { promises as fs, existsSync as exists } from "fs";
 import path from "path";
 
-const filePath = path.resolve("./instance/vote.json");
+const filePath = path.resolve("./.instance/vote.json");
 
-export async function readVotesFile() {
+export default async function readVotesFile() {
   try {
-    await fs.access(filePath);
-    const data = await fs.readFile(filePath, "utf-8");
-    return JSON.parse(data);
+
+    if (exists(filePath)) {
+      await fs.access(filePath);
+      const data = await fs.readFile(filePath, "utf-8");
+      return JSON.parse(data);
+    }
+
+    return {}
   } catch (err) {
+    console.error(err);
     return {};
   }
 }
