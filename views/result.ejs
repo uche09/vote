@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Result</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- <script src="script.js" defer></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>VOTE RESULT</h1>
+      <h2>Do you enjoy</h2>
+      <h2>Backend Development?</h2>
+      <section>
+        <div class="Btns">
+          <div id="YesBtn" class="result">
+            <!-- YES-RESULT -->
+            <h2>YES: <%= percent.yesPercentage || 0 %>% </h2>
+          </div>
+          <div id="NoBtn" class="result">
+            <!-- NO-RESULT -->
+            <h2>NO: <%= percent.noPercentage || 0 %>% </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+

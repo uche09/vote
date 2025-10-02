@@ -42,6 +42,15 @@ h2 {
   
 }
 
+.result {
+  color: white;
+  border: 0cap;
+  width: 13em;
+  padding: 1em;
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
 #YesBtn:hover{
 background-color: rgb(15, 151, 151);
 }
