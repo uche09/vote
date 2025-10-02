@@ -18,7 +18,7 @@ npm run server
 ```
 
 ## Branching
-- All collaborators must create a branch named contributor/<name> where name is their first name. I have created a branch named (contributor/uche) which is where I am making these changes, you would create yours too.
+- All collaborators must create a branch named contributor/name where name is their first name. I have created a branch named (contributor/uche) which is where I am making these changes, you would create yours too.
 
 ## Contribution
 - All your contribution to this project **MUST** be made in the branch that bears your name, as stated above.
